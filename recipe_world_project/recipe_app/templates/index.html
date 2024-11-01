@@ -38,7 +38,7 @@
                 <div class="card-body">
                     <h2 class="card-title">{{ recipe.title }}</h2>
                     <p class="card-text text-muted h6">{{ recipe.author }} | {{ recipe.created_on}} </p>
-                    <p class="card-text">{{recipe.content|slice:":200" }}</p>
+                    <!-- <p class="card-text">{{recipe.recipe|slice:":200" }}</p> -->
                     <!-- <img src="{{ recipe.image }}" alt="image"> -->
                     <a href="{% url 'recipe_detail' recipe.slug  %}" class="btn btn-primary">Read More &rarr;</a>
 

@@ -1,4 +1,23 @@
-{% extends 'base.html' %} {% block content %}
+{% extends 'base.html' %} 
+
+{% block content %}
+
+<style>
+  body {
+      font-family: "Roboto", sans-serif;
+      font-size: 18px;
+      background-color: #fdfdfd;
+  }
+
+  .head_text {
+      color: white;
+  }
+
+  .card {
+      box-shadow: 0 16px 48px #E3E7EB;
+  }
+</style>
+
 
 <div class="container">
   <div class="row">
@@ -6,7 +25,10 @@
       <div class="card-body">
         <h1>{% block title %} {{ object.title }} {% endblock title %}</h1>
         <p class=" text-muted">{{ recipe.author }} | {{ recipe.created_on }}</p>
-        <p class="card-text ">{{ object.content | linebreaks }}</p>
+        <h4>Ingredients</h4>
+        <p class="card-text ">{{ object.ingredients | linebreaks }}</p><br>
+        <h4>Recipe</h4>
+        <p class="card-text ">{{ object.recipe | linebreaks }}</p>
         <!-- We display the body from our context object, which DetailView makes accessible as an object. -->
       </div>
     </div>
