@@ -16,7 +16,7 @@ class Recipe(models.Model):
     recipe=models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
     status = models.IntegerField(choices=STATUS, default=0)
-    # image = models.ImageField(upload_to = 'static/images/% Y/% m/% d/', height_field=None, width_field=None)
+    image = models.ImageField(upload_to = 'static/images/', height_field=0, width_field=0)
 
     class Meta:
         ordering = ['-created_on']
