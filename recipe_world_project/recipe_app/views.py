@@ -12,4 +12,6 @@ class RecipeDetail(generic.DetailView):
     model = Recipe
     template_name = 'recipe_detail.html'
 
+    
+
 # Create your views here.
